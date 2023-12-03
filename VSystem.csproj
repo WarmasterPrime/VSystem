@@ -4,7 +4,34 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ApplicationIcon>Virtma Logo V2.ico</ApplicationIcon>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>$(AssemblyName)</Title>
+    <Authors>Daniel K. Valente</Authors>
+    <Company>DOFT</Company>
+    <Description>Introduces new system-based classes/objects that provide easily accessible system information.</Description>
+    <PackageIcon>ezgif-3-57d9c1e68a.png</PackageIcon>
+    <PackageTags>vadvance;vsystem;system;management;os;information;data</PackageTags>
+    <PackAsTool>True</PackAsTool>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <IncludeSymbols>True</IncludeSymbols>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Virtma Logo V2.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\kekoa\Downloads\ezgif-3-57d9c1e68a.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <Reference Include="System.Management">
