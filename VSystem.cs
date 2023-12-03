@@ -3,6 +3,9 @@ using System.Management;
 
 namespace VSystem
 {
+	/// <summary>
+	/// Manages system information and queries.
+	/// </summary>
 	public class VSystem
 	{
 		/// <summary>
