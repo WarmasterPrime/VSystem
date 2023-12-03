@@ -1,5 +1,8 @@
 ﻿namespace VSystem
 {
+	/// <summary>
+	/// Stores memory information.
+	/// </summary>
 	public struct VMemory
 	{
 		/// <summary>
