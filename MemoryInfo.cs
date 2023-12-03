@@ -2,6 +2,9 @@
 
 namespace VSystem
 {
+	/// <summary>
+	/// Provides information about a memory device.
+	/// </summary>
 	public struct MemoryInfo
 	{
 		/// <summary>
@@ -30,6 +33,11 @@ namespace VSystem
 		public readonly long Capacity;
 
 
+		/// <summary>
+		/// Creates a new instance of the <see cref="MemoryInfo"/> struct.
+		/// </summary>
+		/// <param name="value">The <see cref="ManagementBaseObject"/> to analyze.</param>
+		/// <exception cref="ArgumentNullException"></exception>
 		public MemoryInfo(ManagementBaseObject value)
 		{
 			if(value is null)
