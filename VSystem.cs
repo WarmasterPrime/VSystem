@@ -10,7 +10,7 @@ namespace VSystem
 		/// <summary>
 		/// The searcher object instance.
 		/// </summary>
-		protected static ManagementObjectSearcher Searcher=new ManagementObjectSearcher();
+		protected static ManagementObjectSearcher Searcher=new ();
 
 
 		/// <inheritdoc cref="Get(ObjectQuery)"/>

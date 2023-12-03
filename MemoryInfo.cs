@@ -18,7 +18,7 @@ namespace VSystem
 		/// <summary>
 		/// The speed of the memory device (In MHz).
 		/// </summary>
-		public readonly int Speed;
+		public readonly double Speed;
 		/// <summary>
 		/// The memory type.
 		/// </summary>
@@ -37,18 +37,21 @@ namespace VSystem
 		/// Creates a new instance of the <see cref="MemoryInfo"/> struct.
 		/// </summary>
 		/// <param name="value">The <see cref="ManagementBaseObject"/> to analyze.</param>
-		/// <exception cref="ArgumentNullException"></exception>
 		public MemoryInfo(ManagementBaseObject value)
 		{
-			if(value is null)
-				throw new ArgumentNullException(nameof(value));
-			Name=value["Name"].ToString()!;
-			Manufacturer=value["Manufacturer"].ToString()!;
-			Speed=Convert.ToInt32(value["Speed"]);
-			MemoryType=value["MemoryType"].ToString()!;
-			FormFactor=value["FormFactor"].ToString()!;
-			Capacity=Convert.ToInt64(value["Capacity"]);
+			Name=GetStringValue(value, "Name");
+			Manufacturer=GetStringValue(value, "Manufacturer");
+			Speed=GetDoubleValue(value, "Speed");
+			MemoryType=GetStringValue(value, "MemoryType");
+			FormFactor=GetStringValue(value, "FormFactor");
+			Capacity=GetLongValue(value, "MemoryType");
 		}
+
+		private static string GetStringValue(ManagementBaseObject obj, string key) => obj[key].ToString()!;
+
+		private static double GetDoubleValue(ManagementBaseObject obj, string key) => Convert.ToDouble(obj[key]);
+
+		private static long GetLongValue(ManagementBaseObject obj, string key) => Convert.ToInt64(obj[key]);
 
 	}
 }
